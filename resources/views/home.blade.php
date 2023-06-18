@@ -11,8 +11,7 @@
                         ILHAMUMTAZA<br>Oleh-Oleh Jambi
                     </h2>
                     <p>Menjual makanan ringan khususnya berbagai varian rempeyek dan keripik tempe</p>
-                    <div class="d-flex">
-                    </div>
+                    <a href="/products" class="btn btn-warning">Lihat Menu</a>
                 </div>
                 <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
                     <img src="assets/image/hero-image.png" class="img-fluid" alt="">
@@ -22,18 +21,57 @@
     </section>
     <!-- End Hero Section -->
 
+    <!-- Tutor Section -->
+    <div class="container text-center my-5">
+        <h2 class="fw-bold text-decoration-underline">Langkah Sederhana</h2>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6 col-lg-3 mb-3 mb-sm-0 p-1">
+                <div class="card">
+                    <div class="card-body d-flex flex-sm-column flex-row align-items-center justify-content-evenly">
+                        <i class="bi bi-cart-plus ukuran-ikon ikon-1"></i>
+                        <h5 class="card-title">Pilih Produk</h5>
+                    </div>
+                </div>
+            </div>  
+            <div class="col-12 col-md-6 col-lg-3 mb-3 mb-sm-0 p-1">
+                <div class="card">
+                    <div class="card-body d-flex flex-sm-column flex-row align-items-center justify-content-evenly">
+                        <i class="bi bi-cash-stack ukuran-ikon ikon-2"></i>
+                        <h5 class="card-title">Bayar Pesanan</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3 mb-sm-0 p-1">
+                <div class="card">
+                    <div class="card-body d-flex flex-sm-column flex-row align-items-center justify-content-evenly">
+                        <i class="bi bi-box2-heart-fill ukuran-ikon ikon-3"></i>
+                        <h5 class="card-title">Pengiriman</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 mb-3 mb-sm-0 p-1">
+                <div class="card">
+                    <div class="card-body d-flex flex-sm-column flex-row align-items-center justify-content-evenly">
+                        <i class="bi bi-bag-heart-fill ukuran-ikon ikon-4"></i>
+                        <h5 class="card-title">Nikmati Produk Kami</h5>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <!-- Info Tutor Section -->
+
     <!-- ======= About Section ======= -->
     <section id="about" class="about mb-5">
         <div class="container">
-            <div class="section-header">
-                <h2>About Us</h2>
-                <p>Learn More <span>About Us</span></p>
+            <div class="section-header text-center mb-3">
+                <h2 class="fw-bold text-decoration-underline">About Us</h2>
             </div>
 
             <div class="row gy-4">
-                <div class="col-lg-7 about-img img-fluid" style="background-image: url(assets/image/owner.png) ;">
+                <div class="col-lg-6 about-img img-fluid" style="background-image: url(assets/image/gambar-rempeyek.jpg);">
                 </div>
-                <div class="col-lg-5 d-flex align-items-end">
+                <div class="col-lg-6 d-flex align-items-end">
                     <div class="content ps-0 ps-lg-5">
                         <p class="fst-italic">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -67,10 +105,8 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
-
-            <div class="section-header">
-                <h2>Contact</h2>
-                <p>Need Help? <span>Contact Us</span></p>
+            <div class="section-header text-center mb-3">
+                <h2 class="fw-bold text-decoration-underline">Contact</h2>
             </div>
 
             <div class="mb-3">
@@ -80,43 +116,50 @@
             </div><!-- End Google Maps -->
 
             <div class="row gy-4">
-
                 <div class="col-md-6">
-                    <div class="info-item  d-flex align-items-center">
-                        <i class="icon bi bi-map flex-shrink-0"></i>
-                        <div>
-                            <h3>Our Address</h3>
-                            <p>A108 Adam Street, New York, NY 535022</p>
+                    <div class="info-item  d-flex align-items-center background-contact">
+                        <div class="ms-3 bg-danger rounded-circle kotak d-flex align-items-center justify-content-center">
+                            <i class="fs-1 bi bi-map flex-shrink-0"></i>
+                        </div>
+                        <div class="ms-2 mt-2">
+                            <p class="h5">Our Address</p>
+                            <p>Jln. M.Yamin, Kec. Jelutung, Kota Jambi, Jambi 36124</p>
                         </div>
                     </div>
                 </div><!-- End Info Item -->
 
                 <div class="col-md-6">
-                    <div class="info-item d-flex align-items-center">
-                        <i class="icon bi bi-envelope flex-shrink-0"></i>
-                        <div>
-                            <h3>Email Us</h3>
-                            <p>contact@example.com</p>
+                    <div class="info-item d-flex align-items-center background-contact">
+                        <div class="ms-3 bg-danger rounded-circle kotak d-flex align-items-center justify-content-center">
+                            <i class="fs-1 bi bi-envelope flex-shrink-0"></i>
+                        </div>
+                        <div class="ms-2 mt-2">
+                            <p class="h5">Email Us</p>
+                            <p>Ilhamumtaza@gmail.com</p>
                         </div>
                     </div>
                 </div><!-- End Info Item -->
 
                 <div class="col-md-6">
-                    <div class="info-item  d-flex align-items-center">
-                        <i class="icon bi bi-telephone flex-shrink-0"></i>
-                        <div>
-                            <h3>Call Us</h3>
-                            <p>+1 5589 55488 55</p>
+                    <div class="info-item  d-flex align-items-center background-contact">
+                        <div class="ms-3 bg-danger rounded-circle kotak d-flex align-items-center justify-content-center">
+                            <i class="fs-1 bi bi-telephone flex-shrink-0"></i>
+                        </div>
+                        <div class="ms-2 mt-2">
+                            <p class="h5">Call Us</p>
+                            <p>+62 81274238466</p>
                         </div>
                     </div>
                 </div><!-- End Info Item -->
 
                 <div class="col-md-6">
-                    <div class="info-item  d-flex align-items-center">
-                        <i class="icon bi bi-share flex-shrink-0"></i>
-                        <div>
-                            <h3>Opening Hours</h3>
-                            <div><strong>Mon-Sat:</strong> 11AM - 23PM;
+                    <div class="info-item d-flex align-items-center background-contact py-2">
+                        <div class="ms-3 bg-danger rounded-circle kotak d-flex align-items-center justify-content-center">
+                            <i class="fs-1 bi bi-clock flex-shrink-0"></i>
+                        </div>
+                        <div class="ms-2 mt-2">
+                            <p class="h5">Opening Hours</p>
+                            <div><strong>Mon-Sat:</strong> 8AM - 4PM;
                                 <strong>Sunday:</strong> Closed
                             </div>
                         </div>
@@ -127,28 +170,22 @@
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
                 <div class="row">
-                    <div class="col-xl-6 form-group">
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                            required>
+                    <div class="col-xl-6 form-group my-2">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                     </div>
-                    <div class="col-xl-6 form-group">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                            required>
+                    <div class="col-xl-6 form-group my-2">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                        required>
+                <div class="form-group my-2">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group my-3">
                     <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="text-center">
+                    <button type="submit" class="rounded-pill btn btn-danger">Send Message</button>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
             <!--End Contact Form -->
 
@@ -157,63 +194,6 @@
     <!-- End Contact Section -->
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-
-        <div class="container">
-            <div class="row gy-3">
-                <div class="col-lg-3 col-md-6 d-flex">
-                    <i class="bi bi-geo-alt icon"></i>
-                    <div>
-                        <h4>Address</h4>
-                        <p>
-                            jln. M.Yamin, Lrg. Teladan, RT.31, RW No.58 <br>
-                            Kec. Jelutung, Kota Jambi, Jambi 36124<br>
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links d-flex">
-                    <i class="bi bi-telephone icon"></i>
-                    <div>
-                        <h4>Contact Us</h4>
-                        <p>
-                            <strong>Phone:</strong> +62 81274238466<br>
-                            <strong>Email:</strong> Ilhamumtaza@gmail.com<br>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links d-flex">
-                    <i class="bi bi-clock icon"></i>
-                    <div>
-                        <h4>Opening Hours</h4>
-                        <p>
-                            <strong>Mon-Sat: 8AM</strong> - 4PM<br>
-                            Sunday: Closed
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Follow Us</h4>
-                    <div class="social-links d-flex">
-                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>ILHAMUMTAZA Oleh-Oleh Jambi</span></strong>. All Rights Reserved
-            </div>
-        </div>
-
-    </footer><!-- End Footer -->
+    
     <!-- End Footer -->
 @endsection

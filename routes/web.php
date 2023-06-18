@@ -35,12 +35,6 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/orders', function () {
-    return view('orders',[
-        "page" => "Orders"
-    ]);
-});
-
 Route::get('/contact', function () {
     return view('contact',[
         "page" => "Contact"

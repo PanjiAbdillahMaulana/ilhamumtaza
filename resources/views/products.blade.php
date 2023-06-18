@@ -14,7 +14,7 @@
             </div>
             <div class="mt-2 mb-3 d-flex flex-column flex-md-row justify-content-around align-items-center">
                 @foreach ($categories as $category)
-                    <div class="card text-bg-dark">
+                    <div class="card">
                         <div class="card-body text-center d-flex align-items-center justify-content-center">
                             <a href="categories/{{ $category->slug }}" class="category-link-product raunded rounded-4 p-3">
                                 <h3 class="card-title"> {{ $category->name }} </h3>
@@ -38,19 +38,15 @@
                     <div class="col-lg-4 col-md-6 col-12 p-2 d-flex justify-content-center">
                         <div class="card card-product" style="width: 18rem;">
                             @if ($product->image)
-                                <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top border-bottzom"
-                                    alt="...">
+                                <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top border-bottzom" alt="...">
                             @else
-                                <img src="https://dummyimage.com/1000x1000/343a40/6c757d" class="card-img-top"
-                                    alt="...">
+                                <img src="https://dummyimage.com/1000x1000/343a40/6c757d" class="card-img-top" alt="...">
                             @endif
                             <div class="card-body">
                                 <h5 class="card-title">{{ $product->product }}</h5>
-                                <p><a href="/categories/{{ $product->category->slug }}" class="category-link">Kategori
-                                        Produk : {{ $product->category->name }}</a></p>
+                                <p><a href="/categories/{{ $product->category->slug }}" class="category-link">Kategori Produk : {{ $product->category->name }}</a></p>
                                 <p class="card-text">{{ $product->detail }}</p>
-                                <a href="/products/{{ $product->slug }}" class="btn btn-warning icon-product1"><i
-                                        class="bi bi-eye-fill"></i></a>
+                                <a href="/products/{{ $product->slug }}" class="btn btn-warning icon-product1"><i class="bi bi-eye-fill"></i></a>
                             </div>
                         </div>
                     </div>

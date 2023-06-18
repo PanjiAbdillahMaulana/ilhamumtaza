@@ -39,27 +39,60 @@
   font-weight: 900;
   font-size: 3rem;
 }
+/* ikon langkah sederhana di homepage */
+.ukuran-ikon{
+  font-size: 5rem;
+}
+
+.ikon-1{
+  color: #4682b4;
+}
+
+.ikon-2{
+  color: #20c997;
+}
+
+.ikon-3{
+  color: #F1C27B;
+}
+
+.ikon-4{
+  color: #dc3545;
+}
+
+/* Contact */
+.kotak{
+  height: 60px;
+  width: 60px;
+}
+
+.background-contact{
+  background-color: #F0F0F0;
+}
 
 .category-link{
   text-decoration: none;
   color: #434242;
 }
 
+.category-link:hover{
+  color: #252525 !important;
+  background-color: #ffc107;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 .category-link-product{
   color: #252525;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #ffc107;
   text-decoration: none;
   transition: 0.2s ease-in;
 }
 
 .category-link-product:hover{
-  color: #f5f5fa;
-  background-color: #252525;
-}
-
-.category-link:hover{
   color: #252525;
-  font-weight: bold;
+  font-weight: bold !important;
+  background-color: #FFE7A0;
 }
 
 .card-produc{
@@ -78,6 +111,10 @@
 .card-product:hover .icon-product1 {
   opacity: 1;
   transform: translate(-50%, -50%);
+}
+
+.card-product:hover .category-link {
+  color: #ffc107;
 }
 
 @media screen and (max-width: 768px) {

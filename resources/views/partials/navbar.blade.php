@@ -28,9 +28,14 @@
                 </div>
                 <a href="/cart" class="ikon pe-2">
                     @php
+                    $notif = 0;
+                    if(auth()->check()) {
                         $cart = \App\models\Cart::where('user_id', auth()->user()->id)->where('status', 0)->first();
-                        $notif = \App\models\CartItem::where('cart_id', $cart->id)->count();
-                    @endphp
+                        if($cart) {
+                            $notif = \App\models\CartItem::where('cart_id', $cart->id)->count();
+                        }
+                    }
+                @endphp
                     <i class="fa fa-shopping-cart mx-md-1 mx-2" style="font-size:24px"></i><span class="badge text-bg-danger">{{ $notif }}</span>
                 </a>
             @else
@@ -58,9 +63,6 @@
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link {{ $page === 'All Products' ? 'active' : '' }}" href="/products">Product's</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link {{ $page === 'Orders' ? 'active' : '' }}" href="/orders">Orders</a>
                 </li>
                 <li class="nav-item mx-2">
                     <a class="nav-link {{ $page === 'Contact' ? 'active' : '' }}" href="/contact">Contact</a>

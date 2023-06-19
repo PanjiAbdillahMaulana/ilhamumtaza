@@ -25,6 +25,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Nama Product</th>
                         <th scope="col">Jumlah</th>
+                        <th scope="col">Total Harga</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -35,6 +36,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $cartItem->product->product }}</td>
                             <td>{{ $cartItem->quantity }}</td>
+                            <td>Rp.{{ number_format($cart->total, 2, ',', '.') }}</td>
                             <td>
                                 <form action="/cart/{{ $cartItem->id }}" method="POST" class="d-inline">
                                     @method('delete')

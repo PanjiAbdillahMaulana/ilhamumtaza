@@ -55,6 +55,24 @@
                 </select>
             </div>
             <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" placeholder="10000"  name="price" value="{{ old('price', $product->price) }}" required>
+                @error('price')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" class="form-control @error('stock') is-invalid @enderror" id="stock" placeholder="0"  name="stock" value="{{ old('stock', $product->stock) }}" required>
+                @error('stock')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="mb-3">
                 <label for="detail" class="form-label">detail</label>
                 <input type="text" class="form-control @error('detail') is-invalid @enderror" id="detail" placeholder="rempeyek ikan enak sekali"  name="detail" value="{{ old('detail', $product->detail) }}" required>
                 @error('detail')

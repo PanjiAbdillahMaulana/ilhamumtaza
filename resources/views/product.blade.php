@@ -11,6 +11,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
+        @if (\Session::has('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ \Session::get('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="row align-items-center justify-content-center">
             {{-- jangan lupa tambah css untuk mengatur style anchor nya --}}
             <div class="col-lg-4 col-md-6 col-12 p-2 d-flex justify-content-center">
@@ -23,8 +29,9 @@
                     @endif
                     <div class="card-body">
                         <h5 class="card-title">{{ $product->product }}</h5>
-                        <p><a href="/categories/{{ $product->category->slug }}" class="category-link">Kategori Produk :
-                                {{ $product->category->name }}</a></p>
+                        <p><a href="/categories/{{ $product->category->slug }}" class="category-link">Kategori Produk : {{ $product->category->name }}</a></p>
+                        <p class="card-text">Harga : Rp.{{ number_format($product->price, 2, ',', '.') }}</p>
+                        <p class="card-text">Stok : {{ $product->stock }}</p>
                         <p class="card-text">{{ $product->detail }}</p>
                     </div>
 

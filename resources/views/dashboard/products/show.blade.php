@@ -23,6 +23,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $product->product }}</h5>
                     <p><a href="/categories/{{ $product->category->slug }}" class="category-link">Kategori Produk : {{ $product->category->name }}</a></p>
+                    <p class="card-text">Harga : Rp.{{ $product->price }}</p>
+                    <p class="card-text">Stock :{{ $product->stock }}</p>
                     <p class="card-text">{{ $product->detail }}</p>
                 </div>
             </div>

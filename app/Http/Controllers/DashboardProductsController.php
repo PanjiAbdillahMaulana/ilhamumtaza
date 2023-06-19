@@ -40,8 +40,10 @@ class DashboardProductsController extends Controller
             'product' => 'required|max:255',
             'slug' => 'required|unique:products',
             'category_id' => 'required',
-            'image' => 'required|image|file',
-            'detail' => 'required'
+            'image' => 'required|mimes:jpg,jpeg,png,gif,avif,webp',
+            'detail' => 'required',
+            'price' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0'
         ]);
 
         $validatedData['image'] = $request->file('image')->store('product-images');
@@ -83,14 +85,16 @@ class DashboardProductsController extends Controller
         $rules =([
             'product' => 'required|max:255',
             'category_id' => 'required',
-            'image' => 'required|image|file',
-            'detail' => 'required'
+            'image' => 'required|mimes:jpg,jpeg,png,gif,avif,webp',
+            'detail' => 'required',
+            'price' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0'
         ]);
 
         if($request->slug != $product->slug){
             $rules['slug'] = 'required|unique:products';
         }
-
+        
         $validatedData = $request->validate($rules);
 
         if($request->oldImage){

@@ -29,7 +29,7 @@
     @if ($products->count())
         <div class="m-5 border border-2 rounded rounded-4">
             <div class="text-center">
-                <p class="h1">Produk </p>
+                <p class="h1">Produk</p>
             </div>
 
             <div class="row align-items-center justify-content-center">
@@ -45,6 +45,8 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $product->product }}</h5>
                                 <p><a href="/categories/{{ $product->category->slug }}" class="category-link">Kategori Produk : {{ $product->category->name }}</a></p>
+                                <p class="card-text">Harga : Rp.{{ $product->price }}</p>
+                                <p class="card-text">Stok : {{ $product->stock }}</p>
                                 <p class="card-text">{{ $product->detail }}</p>
                                 <a href="/products/{{ $product->slug }}" class="btn btn-warning icon-product1"><i class="bi bi-eye-fill"></i></a>
                             </div>

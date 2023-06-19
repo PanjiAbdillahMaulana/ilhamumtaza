@@ -74,24 +74,18 @@
                 <div class="col-lg-6 d-flex align-items-end">
                     <div class="content ps-0 ps-lg-5">
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            UMKM ILHAMUMTAZA Oleh-Oleh Jambi adalah UMKM makanan ringan yang menghadirkan cita rasa autentik Jambi ke dalam setiap produk. Berikut beberapa keunggulan yang dimiliki oleh ILHAMUMTAZA Oleh-Oleh Jambi. 
                         </p>
                         <ul>
-                            <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <li>ILHAMUMTAZA menggunakan bumbu khas Langkok Jambi yang terbuat dari bahan-bahan alami terpilih untuk menciptakan rempeyek lezat, renyah, gurih dan sehat.
                             </li>
-                            <li>Duis aute irure dolor in reprehenderit in voluptate velit.
+                            <li>Produk ILHAMUMTAZA Oleh-Oleh Jambi hadir di berbagai kota besar di Indonesia
                             </li>
-                            <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.
+                            <li>ILHAMUMTAZA Oleh-Oleh Jambi telah menerima sejumlah penghargaan yang merupakan bukti bahwa produk kami dihargai dan diterima oleh masyarakat.
                             </li>
                         </ul>
                         <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                            in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident
+                            Kami berkomitmen untuk tetap terus berusaha menghadirkan variasi baru dan perubahan yang segar dalam produk kami. Kami memahami bahwa keberhasilan jangka panjang bergantung pada kemampuan kami untuk beradaptasi dengan perubahan selera dan preferensi pelanggan.
                         </p>
                     </div>
                 </div>

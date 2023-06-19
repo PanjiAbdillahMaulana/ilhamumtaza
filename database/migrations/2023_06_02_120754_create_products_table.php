@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->text('detail');
+            $table->integer('price')->nullable();
+            $table->integer('stock')->nullable();
             $table->timestamp('publish')->nullable();
             $table->timestamps();
         });

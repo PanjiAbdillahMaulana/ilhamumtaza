@@ -5,7 +5,7 @@
         <h1 class="h2">Add new product</h1>
     </div>
 
-    <div class="col-lg-8">
+    <div class="col-lg-8 my-4">
         <form action="/dashboard/products" method="post" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
@@ -49,9 +49,28 @@
                         @endif
                     @endforeach
                 </select>
+            </div>           
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" placeholder="10000" name="price" value="{{ old('price') }}" required onkeypress="return isNumberKey(event)" oninput="limitToNumbers(event)">
+                @error('price')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
-                <label for="detail" class="form-label">detail</label>
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" class="form-control @error('stock') is-invalid @enderror" id="stock"
+                    placeholder="0" name="stock" value="{{ old('stock') }}" required>
+                @error('stock')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="detail" class="form-label">Detail Product</label>
                 <input type="text" class="form-control @error('detail') is-invalid @enderror" id="detail"
                     placeholder="rempeyek ikan enak sekali" name="detail" value="{{ old('detail') }}" required>
                 @error('detail')
@@ -62,7 +81,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Add product</button>
         </form>
-
     </div>
 
 
@@ -87,5 +105,18 @@
                 imgPreview.src = oFREvent.target.result;
             }
         }
+        
+        function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+        }
+
+        function limitToNumbers(evt) {
+            evt.target.value = evt.target.value.replace(/[^0-9]/g, '');
+        }
+
     </script>
 @endsection

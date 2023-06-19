@@ -38,7 +38,6 @@
         
 
             <hr class="my-3">
-
             <ul class="nav flex-column mb-auto">
                 <li class="nav-item">
                     <form action="/logout" method="post">
@@ -47,6 +46,9 @@
                             <i class="bi bi-box-arrow-left"></i> Logout
                         </button>
                     </form>
+                </li>
+                <li>
+                    <a href="/">Home</a>
                 </li>
             </ul>
         </div>

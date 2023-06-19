@@ -37,10 +37,16 @@ class CartController extends Controller
      */
     public function store(Request $request, $id){
         $product = product::where('id', $id)->first();
+
+        // cek stok
+        if($request->quantity > $product->stock){
+            return redirect("/products/$product->slug")->with('error' , 'Stok tidak cukup');
+        }
+
         // cek validasi
         $cek_keranjang = Cart::where('user_id', auth()->user()->id)->where('status', 0)->first();
 
-        // simpan ke data base cart
+        // simpan ke data base cart 
         if(empty($cek_keranjang)){
             $cart = new Cart;
             $cart->user_id = auth()->user()->id;
@@ -59,13 +65,27 @@ class CartController extends Controller
             $cartItems->product_id = $product->id;
             $cartItems->cart_id = $pesanan_baru->id;
             $cartItems->quantity = $request->quantity;
+            $cartItems->total = $product->price*$request->quantity;
             $cartItems->save();
         }else{
             $cartItems = CartItem::where('product_id', $product->id)->where('cart_id', $pesanan_baru->id)->first(); 
             $cartItems->cart_id = $pesanan_baru->id;
             $cartItems->quantity = $cartItems->quantity+$request->quantity;
+
+            // update total
+            $total_cartItems_baru = $product->price*$request->quantity;
+            $cartItems->total = $cartItems->total+$total_cartItems_baru;
             $cartItems->update();
         }
+
+        // update total harga keseluruhan
+        $cart = Cart::where('user_id', auth()->user()->id)->where('status', 0)->first();
+        $cart->total = $cart->total+$product->price*$request->quantity;
+        $cart->update();
+
+        // update stock di products
+        $product->stock = $product->stock-$request->quantity;
+        $product->update();
         
         return redirect('/products/'.$product->slug)->with('status' , 'Berhasil ditambahkan');
     }

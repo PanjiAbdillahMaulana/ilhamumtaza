@@ -2,13 +2,12 @@
 
 use App\Http\Controllers\AdminAuth;
 use App\Http\Controllers\AdminCategoryController;
-// use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardProductsController;
 use App\Http\Controllers\productController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CartController;
-
+use App\Http\Controllers\UserController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
@@ -41,14 +40,9 @@ Route::get('/contact', function () {
     ]);
 });
 
-Route::get('/profile', function () {
-    return view('users/profile',[
-        "page" => "profile",
-        "name" => "Panji Abdillah Maulana",
-        "email"=> "panji@gmail.com",
-        "image"=> "panji.jpg"
-    ]);
-})->middleware('auth');
+
+Route::resource('/profile', UserController::class)->middleware('auth');
+
 
 Route::get('/products', [productController::class, 'index']);
 // ('products/{product:slug} route model binding
